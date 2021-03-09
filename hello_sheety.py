@@ -9,6 +9,9 @@ DELETE_ENDPOINT = "https://api.sheety.co/ca700cff5747162c513bf4821d202b1a/sheety
 put_object_id = 0
 delete_object_id = 0
 
+get_params = {
+}
+
 post_json = {
     "sheet1":{
         "hello":"1",
@@ -26,7 +29,7 @@ put_json = {
 }
 
 def get():
-    get_response = requests.get(url=GET_ENDPOINT)
+    get_response = requests.get(url=GET_ENDPOINT, params=get_params)
     print(get_response)
     print(get_response.json())
 
